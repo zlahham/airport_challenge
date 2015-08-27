@@ -3,14 +3,10 @@ require_relative 'airport'
 class Plane
   DEFAULT_STATUS = "flying"
 
-  #attr_accessor :status
+  attr_accessor :status
 
   def initialize
     @status = DEFAULT_STATUS
-  end
-
-  def status
-    @status
   end
 
   def land
@@ -18,7 +14,7 @@ class Plane
   end
 
   def landed?
-    if status == "landed"
+    if @status == "landed"
       true
     end
   end
@@ -28,7 +24,7 @@ class Plane
   end
 
   def tookoff?
-    if status == "flying"
+    if @status == "flying"
       true
     end
   end
